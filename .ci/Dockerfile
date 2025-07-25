@@ -1,5 +1,5 @@
 # common environment setup
-FROM ubuntu:24.04 as base
+FROM ubuntu:24.04 AS base
 
 WORKDIR /root
 
@@ -27,7 +27,7 @@ RUN pip install -r requirements.txt && \
     rm requirements.txt
 
 # build LLVM and MLIR in a separate stage so that we avoid including the source code, etc in the final image
-FROM base as builder
+FROM base AS builder
 
 COPY llvm-project ./llvm-project
 
