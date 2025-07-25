@@ -1,9 +1,5 @@
 name: "AutoTest"
 
-permissions:
-  contents: read
-  packages: read
-
 on:
   workflow_dispatch: # can trigger manually
   pull_request: # can trigger on pull requests
